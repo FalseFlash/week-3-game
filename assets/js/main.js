@@ -118,8 +118,9 @@ var check = function(letter) {
             giveError("Sorry, you were hung. Better luck next time!<br>Click reset to play a new game.");
             loseAudio.play();
             loses++;
+            document.getElementById('word').innerHTML = word.toUpperCase();
             document.getElementById('loses').innerHTML = "Loses: " + loses;
-            newGameCountdown(6);
+            newGameCountdown(10);
         }
     }
 
@@ -129,7 +130,7 @@ var check = function(letter) {
         document.getElementById('wins').innerHTML = "Wins: " + wins;
         winAudio.play();
         gameStarted = false;
-        newGameCountdown(6);
+        newGameCountdown(10);
     }
 
     guesses.push(letter);

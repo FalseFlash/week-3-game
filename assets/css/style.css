@@ -124,11 +124,11 @@ main:last-of-type {
 /* Start guessing word */
 #word {
     margin-top: -10px;
+    font-size: 28px;
 }
 #word span {
     display: inline-block;
     margin-left: 15px;
-    font-size: 28px;
 }
 
 /* Game container */
