@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: url('../images/bg.png');
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+main {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+main:last-of-type {
+    margin-bottom: 60px;
+}
+
+/* Start custom theme colors */
+
+/* Background colors */
+.primary-color {
+    background: #3E50B4; /* Always used before accent color */
+}
+
+.accent-color {
+    background: #FF3F80; /* Should be used after main color */
+}
+
+.gray-900 {
+    background: #212121;
+}
+
+.gray-800 {
+    background: #424242;
+}
+
+.gray {
+    background: #303030;
+}
+
+/*Text colors*/
+.primary-text {
+    color: #FFFFFF;
+}
+
+.secondary-text {
+    color: #959595;
+}
+
+.disabled-text {
+    color: #666666;
+}
+
+.black-text {
+    color: #000000;
+}
+
+
+/* Start of top header */
+
+.top-header {
+    padding: 30px;
+    width: 100%;
+    border-bottom: 1px solid #2b669a;
+    color: #FFFFFF;
+    border-bottom: 10px solid #424242;
+}
+
+.top-header h2 {
+    margin: 0;
+}
+
+/* Start of difficulty */
+
+#difficulty {
+    margin: 20px auto 10px auto;
+}
+
+/* Start custom buttons */
+
+.btnMain > span,li {
+    background: #FF3F80;
+    padding: 10px;
+    border-radius: 3px;
+
+    /* Prevent selections */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btnMain > span:hover, #letter-buttons li:hover {
+    cursor: pointer;
+}
+
+.btnMain > span:active,  #letter-buttons li:active {
+    background: #AD1457;
+}
+
+/* Letters */
+#letter-buttons ul {
+    list-style-type: none;
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+#letter-buttons ul li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+/* Start guessing word */
+#word {
+    margin-top: -10px;
+}
+#word span {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 28px;
+}
+
+/* Game container */
+
+.gameContainer {
+    display: none;
+}
+
+#countdown {
+    margin-top: 20px;
+}
+
+/* Start of footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 23px;
+}

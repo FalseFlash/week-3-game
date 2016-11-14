@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray's Hangman</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="top-header gray-900">
+        <div class="container">
+            <h2>Hangman</h2>
+        </div>
+    </header>
+    <div class="container">
+        <main class="gray row diffChoose">
+            <div class="col-xs-12">
+                <p>Welcome to hangman, a game where you must prevent yourself from being hung. Start by guessing the word that was randomly chosen. If you make too many wrong guesses you will be hung and you will lose the game.</p>
+                <p class="text-center">Start by choosing your difficulty level.</p>
+            </div>
+
+            <div class="col-xs-12 text-center" id="difficulty">
+                <div class="col-xs-4 btnMain diff" onclick="setDifficulty(1);"><span>Easy</span></div>
+                <div class="col-xs-4 btnMain diff" onclick="setDifficulty(2);"><span>Medium</span></div>
+                <div class="col-xs-4 btnMain diff" onclick="setDifficulty(3);"><span>Hard</span></div>
+            </div>
+        </main>
+
+        <div class="col-xs-12 text-center black-text">
+            <div class="text-center">
+                <h4 id="wins">Wins: 0</h4>
+                <h4 id="loses">Loses: 0</h4>
+            </div>
+        </div>
+
+        <div class="gameContainer">
+            <div class="text-center text-primary">
+                <h2 id="lives">Lives Left: 9</h2>
+            </div>
+            <main class="gray row text-center">
+                <div id="word"></div>
+            </main>
+
+            <main class="row text-center">
+                <div class="col-xs-12" id="letter-buttons"></div>
+                <div class="black-text col-xs-12" id="errorField"></div>
+            </main>
+
+            <main class="row text-center">
+                <div class="btnMain" id="reset" onclick="reset();"><span>Reset Game</span></div>
+                <div id="countdown" class="text-danger"></div>
+            </main>
+        </div>
+    </div>
+    <footer class="primary-color">
+        <div class="text-center">
+            &copy; 2016 Ray McCann
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </footer>
+</body>
+</html>
