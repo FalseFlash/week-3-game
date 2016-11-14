@@ -1,1 +1,3 @@
-# week-3-game
+# Hangman
+
+Features a timer, difficulty levels and even json word list.
