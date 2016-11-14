@@ -17,6 +17,9 @@ var timer; // Countdown timer to start a new game.
 
 var winAudio = new Audio('assets/sounds/win.wav');
 var loseAudio = new Audio('assets/sounds/lose.wav');
+var correctAudio = new Audio('assets/sounds/correct.mp3');
+var incorrectAudio = new Audio('assets/sounds/incorrect.wav');
+var errorAudio = new Audio('assets/sounds/error.wav');
 
 var loses = 0;
 var wins = 0;
@@ -89,6 +92,7 @@ var check = function(letter) {
 
     if(guesses.indexOf(letter) > -1) {
         giveError("You've already guessed the letter " + letter.toUpperCase());
+        errorAudio.play();
         return;
     } else {
         document.getElementById('errorField').innerHTML = "";
@@ -102,10 +106,12 @@ var check = function(letter) {
            if(arrWord[i] == letter){
                document.getElementById(i).innerHTML = letter.toUpperCase();
                cGuesses.push(letter);
+               correctAudio.play();
            }
        }
     } else {
         giveError("Sorry, " + letter.toUpperCase() + " was incorrect!");
+        incorrectAudio.play();
         removeALife();
         if(lives == 0) {
             gameStarted = false;
