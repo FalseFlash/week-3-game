@@ -8,6 +8,7 @@ var word = ""; // Current selected word
 var wordList;
 var arrWord = []; // The word in array format.
 var guesses = []; // Letters guessed
+var cGuesses = []; // Correct letters guessed
 var lives = 9; // Number of guesses remaining.
 var counter = 0; // Number of correct guesses
 var gameStarted = true;
@@ -100,7 +101,7 @@ var check = function(letter) {
        for(var i = 0; i < arrWord.length; i++) {
            if(arrWord[i] == letter){
                document.getElementById(i).innerHTML = letter.toUpperCase();
-               guesses.push(letter);
+               cGuesses.push(letter);
            }
        }
     } else {
@@ -116,7 +117,7 @@ var check = function(letter) {
         }
     }
 
-    if(guesses.length == arrWord.length) {
+    if(cGuesses.length == arrWord.length) {
         giveError("Congratulations, you won!<br>Click reset to play a new game.");
         wins++;
         document.getElementById('wins').innerHTML = "Wins: " + wins;
@@ -124,6 +125,8 @@ var check = function(letter) {
         gameStarted = false;
         newGameCountdown(6);
     }
+
+    guesses.push(letter);
 };
 
 // Reset the game to default.
