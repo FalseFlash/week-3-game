@@ -94,6 +94,7 @@ var check = function(letter) {
         document.getElementById(letter + "_button").style.textDecoration = "line-through";
         document.getElementById(letter + "_button").style.background = "#F8BBD0";
         document.getElementById(letter + "_button").style.cursor = "default";
+        guesses.push(letter);
     }
 
     if(arrWord.indexOf(letter) > -1) {
@@ -123,8 +124,6 @@ var check = function(letter) {
         gameStarted = false;
         newGameCountdown(6);
     }
-
-    guesses.push(letter);
 };
 
 // Reset the game to default.
