@@ -140,6 +140,7 @@ var reset = function(startNew) {
     lives = 9;
     counter = 0;
     guesses = [];
+    cGuesses = [];
 
     clearInterval(timer);
 
