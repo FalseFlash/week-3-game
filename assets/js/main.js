@@ -94,13 +94,13 @@ var check = function(letter) {
         document.getElementById(letter + "_button").style.textDecoration = "line-through";
         document.getElementById(letter + "_button").style.background = "#F8BBD0";
         document.getElementById(letter + "_button").style.cursor = "default";
-        guesses.push(letter);
     }
 
     if(arrWord.indexOf(letter) > -1) {
        for(var i = 0; i < arrWord.length; i++) {
            if(arrWord[i] == letter){
                document.getElementById(i).innerHTML = letter.toUpperCase();
+               guesses.push(letter);
            }
        }
     } else {
